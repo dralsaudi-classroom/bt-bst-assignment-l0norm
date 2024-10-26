@@ -104,7 +104,8 @@ public class BT<T> {
 
 
 	public int countLeaves() {
-		if(root == null){
+
+		if(empty()){
 			return 0;
 		}
 
@@ -130,6 +131,8 @@ public class BT<T> {
 			
 		}
 
+		current = root;
+		
 		return count;
 
 

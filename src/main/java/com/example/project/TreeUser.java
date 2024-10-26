@@ -2,6 +2,7 @@ package com.example.project;
 
 public class TreeUser {
     public static <T> int countLeaves(BT<T> bt) {
+        
         if(bt.empty()){
             return 0;
         }
@@ -13,7 +14,7 @@ public class TreeUser {
 
 
         if(bt.isLeaf()){
-            count = count + 1;
+            count++;
         }
 
         if (bt.find(Relative.LeftChild)) {
@@ -23,10 +24,10 @@ public class TreeUser {
         }
         if (bt.find(Relative.RightChild)) {
             count = count + countLeaves(bt);
-            
+            bt.find(Relative.Parent);
         }
 
-        bt.find(Relative.Root);
+        
         
 
     
